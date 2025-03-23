@@ -1,0 +1,79 @@
+<div class="container py-5">
+    <header class="mb-4 text-center">
+        <h1 class="fw-bolder">Admin Dashboard</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#courses">Manage Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#reviews">Manage Reviews</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Courses Section -->
+    <section id="courses" class="mb-5">
+        <h2 class="fw-bolder">Manage Courses</h2>
+        <p class="text-muted mb-4">Here you can view, edit, or delete courses.</p>
+
+        <!-- Button to Add New Course -->
+        <button class="btn btn-success mb-4">Add New Course</button>
+
+        <div class="course-container">
+            <!-- Example Course 1 -->
+            <div class="course-card">
+                <h4>Web Development 101</h4>
+                <p class="text-muted">Progress: 50%</p>
+                <div class="progress">
+                    <div class="progress-bar bg-success" style="width: 50%"></div>
+                </div>
+
+                <button class="btn btn-primary mt-3">Edit Course</button>
+                <button class="btn btn-danger mt-2">Delete Course</button>
+            </div>
+
+            <!-- Example Course 2 -->
+            <div class="course-card">
+                <h4>Data Science with Python</h4>
+                <p class="text-muted">Progress: 30%</p>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" style="width: 30%"></div>
+                </div>
+
+                <button class="btn btn-primary mt-3">Edit Course</button>
+                <button class="btn btn-danger mt-2">Delete Course</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2 class="fw-bolder">Manage Reviews</h2>
+        <p class="text-muted mb-4">Here you can view, edit, or delete student reviews.</p>
+
+        <!-- Button to Add New Review -->
+        <button class="btn btn-success mb-4">Add New Review</button>
+
+        <div class="review-container">
+            <!-- Example Review 1 -->
+            <div class="review-card">
+                <h4>Review for Web Development 101</h4>
+                <p class="text-muted">"Great course! I learned a lot about web development. The material was easy to follow."</p>
+
+                <button class="btn btn-primary mt-3">Edit Review</button>
+                <button class="btn btn-danger mt-2">Delete Review</button>
+            </div>
+
+            <!-- Example Review 2 -->
+            <div class="review-card">
+                <h4>Review for Data Science with Python</h4>
+                <p class="text-muted">"The course was okay, but I expected more advanced material. The instructor was good."</p>
+
+                <button class="btn btn-primary mt-3">Edit Review</button>
+                <button class="btn btn-danger mt-2">Delete Review</button>
+            </div>
+        </div>
+    </section>
+</div>
