@@ -1,0 +1,86 @@
+<!-- Page Content -->
+<section class="py-5">
+    <div class="container px-5 my-5">
+        <div class="row gx-5">
+            <!-- Left Column with Post Content -->
+            <div class="col-lg-8">
+                <article>
+                    <!-- Post header-->
+                    <header class="mb-4">
+                        <h1 class="fw-bolder mb-1">Top 10 Programming Courses to Kickstart Your Coding Career in 2025</h1>
+                        <div class="text-muted fst-italic mb-2">January 1, 2023</div>
+                        <a class="badge bg-secondary text-decoration-none link-light" href="#">Course</a>
+                        <a class="badge bg-secondary text-decoration-none link-light" href="#">Reviews</a>
+                    </header>
+                    <figure class="mb-4">
+                        <img class="img-fluid rounded" src="assets/photos/coding-programming-project-ideas-1128x635-2.jpg" alt="..." style="max-width: 100%; height: auto; width: 75%;" />
+                    </figure>
+                    <section class="mb-5">
+                        <p class="fs-5 mb-4">The tech industry is booming, and with it comes a constant demand for skilled programmers...</p>
+                        <h3 class="fw-bolder mb-4 mt-5">Top 10 Programming Courses to Kickstart Your Coding Career in 2025</h3>
+                        <ul class="fs-5 mb-4">
+                            <li><strong>Harvard’s CS50: Introduction to Computer Science</strong> – A comprehensive introduction...</li>
+                            <li><strong>The Complete Web Developer Bootcamp 2025 by Colt Steele</strong> – Hands-on course teaching...</li>
+                            <li><strong>Python for Everybody by Dr. Charles Severance</strong> – A beginner-friendly course focused...</li>
+                        </ul>
+                    </section>
+                </article>
+            </div>
+            <!-- Right Column for Additional Content -->
+            <div class="col-lg-4">
+                <div class="bg-light p-4 rounded mb-4">
+                    <h5>Related Courses</h5>
+                    <ul>
+                        <li><a href="#">Advanced Python Programming</a></li>
+                        <li><a href="#">Data Science with Python</a></li>
+                        <li><a href="#">Machine Learning Basics</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Review Form (Moved Outside the Row) -->
+        <section class="py-5">
+            <div class="container px-5">
+                <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">Leave a Review</h1>
+                        <p class="lead fw-normal text-muted mb-0">Share your experience with us</p>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <form id="reviewForm" novalidate>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="reviewName" type="text" placeholder="Enter your name..." required />
+                                    <label for="reviewName">Your Name</label>
+                                    <div class="invalid-feedback">Name is required.</div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <select class="form-select" id="reviewRating" required>
+                                        <option value="" disabled selected>Select a rating</option>
+                                        <option value="1">1 Star</option>
+                                        <option value="2">2 Stars</option>
+                                        <option value="3">3 Stars</option>
+                                        <option value="4">4 Stars</option>
+                                        <option value="5">5 Stars</option>
+                                    </select>
+                                    <label for="reviewRating">Rating</label>
+                                    <div class="invalid-feedback">Please select a rating.</div>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="reviewComment" placeholder="Enter your review..." required></textarea>
+                                    <label for="reviewComment">Your Review</label>
+                                    <div class="invalid-feedback">Review cannot be empty.</div>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg" id="reviewSubmitButton" type="submit">Submit Review</button>
+                                </div>
+                            </form>
+                            <ul id="reviewList" class="list-group mt-4"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>

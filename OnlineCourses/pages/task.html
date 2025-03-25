@@ -1,0 +1,39 @@
+
+    <div class="container my-5">
+        <h2 class="text-center">C++ Task 1: Array Manipulation</h2>
+        <p class="lead text-center">Practice sorting, reversing, and merging arrays in C++.</p>
+        
+        <div class="card shadow p-4">
+            <h4>Task Description</h4>
+            <p>Write a program to manipulate arrays. The task requires:</p>
+            <ul>
+                <li>Sorting an array</li>
+                <li>Reversing an array</li>
+                <li>Merging two arrays into one</li>
+            </ul>
+            <p>Try implementing the functions and test them below.</p>
+        </div>
+
+        <div class="mt-4">
+            <h4>Code Editor</h4>
+            <textarea id="code-editor" class="form-control"></textarea>
+            <button class="btn btn-success mt-3 w-100" onclick="submitCode()">Run Code</button>
+        </div>
+    </div>
+
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+            mode: "text/x-c++src",
+            lineNumbers: true,
+            matchBrackets: true,
+            indentUnit: 4,
+            theme: "default",
+            lineWrapping: true,
+            height: "500px"
+        });
+
+        function submitCode() {
+            var code = editor.getValue();
+            alert("Your code: \n" + code);
+        }
+    </script>

@@ -1,0 +1,113 @@
+
+            <!-- Registration Form -->
+            <div class="container py-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+                            <div class="text-center mb-5">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-plus"></i></div>
+                                <h1 class="fw-bolder">Create an Account</h1>
+                                <p class="lead fw-normal text-muted mb-0">Join us today!</p>
+                            </div>
+                            <form id="registrationForm">
+                                <!-- First and Last Name -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input class="form-control" id="firstName" type="text" placeholder="First Name" required />
+                                            <label for="firstName">First Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input class="form-control" id="lastName" type="text" placeholder="Last Name" required />
+                                            <label for="lastName">Last Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Email -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" required />
+                                    <label for="email">Email Address</label>
+                                </div>
+                                <!-- Password -->
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input class="form-control" id="password" type="password" placeholder="Password" required />
+                                            <label for="password">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input class="form-control" id="confirmPassword" type="password" placeholder="Confirm Password" required />
+                                            <label for="confirmPassword">Confirm Password</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Role Selection -->
+                                <div class="mb-3">
+                                    <label class="form-label">Register as:</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="role" id="student" value="student" required>
+                                        <label class="form-check-label" for="student">Student</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="role" id="teacher" value="teacher" required>
+                                        <label class="form-check-label" for="teacher">Teacher</label>
+                                    </div>
+                                </div>
+
+                                <!-- Date of Birth -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="dob" type="date" required />
+                                    <label for="dob">Date of Birth</label>
+                                </div>
+                                <!-- Phone Number -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" required />
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg" id="registerButton" type="submit">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div class="col-lg-6">
+                        <div class="bg-light rounded-3 py-5 px-4 px-md-5">
+                            <div class="text-center mb-5">
+                                <div class="feature bg-success bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-lock"></i></div>
+                                <h1 class="fw-bolder">Login</h1>
+                                <p class="lead fw-normal text-muted mb-0">Already have an account? Login here!</p>
+                            </div>
+                            <form id="loginForm">
+                                <!-- Email -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="loginEmail" type="email" placeholder="name@example.com" required />
+                                    <label for="loginEmail">Email Address</label>
+                                </div>
+                                <!-- Password -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="loginPassword" type="password" placeholder="Password" required />
+                                    <label for="loginPassword">Password</label>
+                                </div>
+                                <!-- Confirm Password (Optional) -->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="confirmLoginPassword" type="password" placeholder="Confirm Password" />
+                                    <label for="confirmLoginPassword">Confirm Password</label>
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="d-grid">
+                                    <button class="btn btn-success btn-lg" id="loginButton" type="submit">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    

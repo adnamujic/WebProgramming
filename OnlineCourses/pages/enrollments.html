@@ -1,0 +1,139 @@
+
+        <style>
+            .course-card {
+                margin-bottom: 20px;
+                border-radius: 10px; 
+                padding: 20px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+            }
+
+            .course-card h4 {
+                font-size: 1.2rem;
+            }
+
+            .progress-bar {
+                height: 20px;
+            }
+
+            .review-section, .question-section {
+                margin-top: 15px;
+            }
+
+            .question-button {
+                margin-top: 10px;
+            }
+
+            .course-container {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                flex-wrap: wrap; 
+            }
+
+            @media (max-width: 768px) {
+                .course-container {
+                    flex-direction: column;
+                }
+            }
+
+            .notification-container {
+                margin-bottom: 20px;
+            }
+
+            .badge-container span {
+                margin-right: 5px;
+            }
+        </style>
+       
+
+            <!-- Enrollments Section-->
+            <section class="py-5">
+                <div class="container px-5">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="fw-bolder">My Enrollments</h2>
+                            <p class="lead text-muted mb-5">Here you can view the courses you're enrolled in, track your progress, leave reviews, and ask questions to the instructor.</p>
+
+                            <!-- Filter Courses -->
+                            <div class="filter-container mb-4">
+                                <label for="sort-by">Sort by: </label>
+                                <select id="sort-by" class="form-select">
+                                    <option value="progress">Progress</option>
+                                    <option value="date">Date Enrolled</option>
+                                    <option value="name">Course Name</option>
+                                </select>
+                            </div>
+
+                            <!-- Notifications -->
+                            <div class="notification-container">
+                                <div class="alert alert-info" role="alert">
+                                    New lecture on Data Science uploaded!
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    Reminder: Assignment for Web Development 101 due in 2 days!
+                                </div>
+                            </div>
+
+                            <!-- Course Container -->
+                            <div class="course-container">
+                                <!-- Example Course 1 -->
+                                <div class="course-card col-12 col-md-5">
+                                    <h4 class="fw-bolder">Web Development 101</h4>
+                                    <p class="text-muted">Progress: <span id="progress-1">50%</span></p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 50%" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <!-- Review Section -->
+                                    <div class="review-section">
+                                        <h5>Leave a Review:</h5>
+                                        <textarea class="form-control" rows="3" placeholder="Write your review here..."></textarea>
+                                        <button class="btn btn-primary mt-3">Submit Review</button>
+                                    </div>
+
+                                    <!-- Question Section -->
+                                    <div class="question-section">
+                                        <h5>Ask a Question:</h5>
+                                        <textarea class="form-control" rows="3" placeholder="Ask your question here..."></textarea>
+                                        <button class="btn btn-success question-button mt-3">Submit Question</button>
+                                    </div>
+                                </div>
+
+                                <!-- Example Course 2 -->
+                                <div class="course-card col-12 col-md-5">
+                                    <h4 class="fw-bolder">Data Science with Python</h4>
+                                    <p class="text-muted">Progress: <span id="progress-2">30%</span></p>
+                                    <div class="progress">
+                                        <div class="progress-bar" style="width: 30%" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+
+                                    <!-- Review Section -->
+                                    <div class="review-section">
+                                        <h5>Leave a Review:</h5>
+                                        <textarea class="form-control" rows="3" placeholder="Write your review here..."></textarea>
+                                        <button class="btn btn-primary mt-3">Submit Review</button>
+                                    </div>
+
+                                    <!-- Question Section -->
+                                    <div class="question-section">
+                                        <h5>Ask a Question:</h5>
+                                        <textarea class="form-control" rows="3" placeholder="Ask your question here..."></textarea>
+                                        <button class="btn btn-success question-button mt-3">Submit Question</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Achievements -->
+                            <div class="badge-container mb-4">
+                                <h5>Your Achievements:</h5>
+                                <span class="badge bg-success">Completed: Web Development 101</span>
+                                <span class="badge bg-warning">Progress: Data Science with Python - 30%</span>
+                            </div>
+
+                            <!-- Calendar -->
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
