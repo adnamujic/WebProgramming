@@ -1,6 +1,5 @@
 <?php
 class Database {
-    // private static $host = 'localhost';
     private static $host = 'localhost:3306'; 
     private static $dbName = 'WebOnlineCourses';  
     private static $username = 'root';
@@ -24,6 +23,13 @@ class Database {
             }
         }
         return self::$connection;
+    }
+}
+
+//JWT konfiguracija
+class Config {
+    public static function JWT_SECRET() {
+        return 'adnamujic'; 
     }
 }
 ?>
