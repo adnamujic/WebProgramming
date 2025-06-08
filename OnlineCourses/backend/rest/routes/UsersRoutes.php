@@ -7,7 +7,7 @@ Flight::route('GET /users', function() {
     AuthMiddleware::verifyTokenFromHeader();
     AuthMiddleware::authorizePermission('read');
 
-    $service = new UserService();
+    $service = new UsersService();
     Flight::json($service->getAll());
 });
 
@@ -20,7 +20,7 @@ Flight::route('GET /users/@id', function($id) {
         Flight::halt(403, 'Access denied');
     }
 
-    $service = new UserService();
+    $service = new UsersService();
     $userData = $service->getById($id);
     Flight::json($userData);
 });
@@ -28,7 +28,7 @@ Flight::route('GET /users/@id', function($id) {
 // Registracija novog korisnika - otvorena ruta
 Flight::route('POST /users/register', function() {
     $data = Flight::request()->data->getData();
-    $service = new UserService();
+    $service = new UsersService();
 
     if ($service->emailExists($data['email'])) {
         Flight::json(['error' => 'Email već postoji.'], 400);
@@ -43,7 +43,7 @@ Flight::route('POST /users/register', function() {
 // Login - otvorena ruta
 Flight::route('POST /users/login', function() {
     $data = Flight::request()->data->getData();
-    $service = new UserService();
+    $service = new UsersService();
     $user = $service->getByEmail($data['email']);
 
     if (!$user || !password_verify($data['password'], $user['password'])) {
@@ -81,7 +81,7 @@ Flight::route('PUT /users/@id', function($id) {
     }
 
     $data = Flight::request()->data->getData();
-    $service = new UserService();
+    $service = new UsersService();
     $service->update($id, $data);
     Flight::json(['message' => 'Korisnik ažuriran.']);
 });
@@ -91,14 +91,14 @@ Flight::route('DELETE /users/@id', function($id) {
     AuthMiddleware::verifyTokenFromHeader();
     AuthMiddleware::authorizePermission('delete');
 
-    $service = new UserService();
+    $service = new UsersService();
     $service->delete($id);
     Flight::json(['message' => 'Korisnik obrisan.']);
 });
 
 // Provjera emaila - otvoreno
 Flight::route('GET /users/emailExists/@email', function($email) {
-    $service = new UserService();
+    $service = new UsersService();
     $emailExists = $service->emailExists($email);
     Flight::json(['emailExists' => $emailExists]);
 });
