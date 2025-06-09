@@ -135,4 +135,30 @@ $(document).on("submit", "#reviewForm", function (event) {
         toastr.success("Your review has been submitted successfully!", "Success");
         $("#reviewForm")[0].reset(); // Reset form fields
     }, 500);
+
+    //Registracija bazirana na role
+    function parseJwt(token) {
+        try {
+          const base64Url = token.split('.')[1];
+          const base64 = atob(base64Url.replace(/-/g, '+').replace(/_/g, '/'));
+          return JSON.parse(decodeURIComponent(escape(base64)));
+        } catch (e) {
+          return null;
+        }
+      }
+      
+      window.addEventListener('DOMContentLoaded', () => {
+        const token = localStorage.getItem('token');
+        const dashboardLink = document.getElementById('dashboardLink');
+      
+        if (token) {
+          const decoded = parseJwt(token);
+          if (decoded?.user?.role !== 'admin') {
+            if (dashboardLink) dashboardLink.style.display = 'none';
+          }
+        } else {
+          if (dashboardLink) dashboardLink.style.display = 'none';
+        }
+      });
+      
 });
